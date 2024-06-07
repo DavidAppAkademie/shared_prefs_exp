@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:shared_prefs_exp/src/data/database_repository.dart';
 import 'package:shared_prefs_exp/src/features/presentation/main_screen.dart';
 
 class App extends StatelessWidget {
-  const App({super.key});
+  final DatabaseRepository db;
+  const App({super.key, required this.db});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MainScreen(),
+    return MaterialApp(
+      home: MainScreen(db: db),
     );
   }
 }
