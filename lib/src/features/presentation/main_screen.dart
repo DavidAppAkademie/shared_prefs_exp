@@ -38,8 +38,10 @@ class _MainScreenState extends State<MainScreen> {
             },
             child: const Text("Lies Vorname aus Speicher"),
           ),
-          Text("Der Name ist: $firstName",
-              style: Theme.of(context).textTheme.displayMedium),
+          Text(
+            "Der Name ist: $firstName",
+            style: Theme.of(context).textTheme.displayMedium,
+          ),
         ],
       ),
     );
